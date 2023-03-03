@@ -1,0 +1,19 @@
+name: dart_github_action
+description: A GitHub Actions template for actions written in Dart.
+repository: https://github.com/abitofevrything/dart_github_action
+
+version: 0.1.0
+
+environment:
+  mason: ">=0.1.0-dev.47 <0.1.0"
+
+vars:
+  action_name:
+    type: string
+    description: The name of the action
+    prompt: 'Enter the name of the action:'
+
+  action_description:
+    type: string
+    description: A short description of what the action does
+    prompt: 'Enter a short description of what the action does:'

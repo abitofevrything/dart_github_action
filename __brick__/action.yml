@@ -1,0 +1,20 @@
+name: {{ action_name }}
+description: {{ action_description }}
+
+runs:
+  using: docker
+  image: Dockerfile
+{{ #has_inputs }}
+inputs:{{ #inputs }}
+  {{ name }}:
+    description: {{ description }}{{ #required }}
+    required: true
+{{ /required }}{{ #default }}
+    default: '{{ default }}'
+{{ /default }}{{ /inputs }}
+{{ /has_inputs }}
+{{ #has_outputs }}
+outputs:{{ #outputs }}
+  {{ name }}:
+    description: {{ description }}{{ /outputs }}
+{{ /has_outputs }}
